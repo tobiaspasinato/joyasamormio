@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NavBar from "./components/NavBar";
+import NavBar from "../components/NavBar";
 import styles from "./page.module.css";
 
 const ADDRESS = "Av. Santa Fe 2456, CABA, Argentina";
