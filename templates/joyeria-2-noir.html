@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Noir — Joyería</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500&display=swap');
+
+  :root{
+    --bg:#141210;
+    --fg:#ECE7DF;
+    --gold:#C9A24B;
+    --line:#2B2723;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--fg);
+    font-family:'Manrope', sans-serif; font-weight:300;
+    line-height:1.6;
+  }
+  h1,h2{ font-family:'Marcellus', serif; font-weight:400; }
+
+  header{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:36px 6vw; border-bottom:1px solid var(--line);
+  }
+  .logo{ font-family:'Marcellus', serif; font-size:1.5rem; }
+  nav a{ color:var(--fg); text-decoration:none; margin-left:32px; font-size:0.85rem; }
+  nav a:hover{ color:var(--gold); }
+
+  .hero{
+    padding:120px 6vw 100px; text-align:center;
+  }
+  .hero .eyebrow{ color:var(--gold); font-size:0.85rem; letter-spacing:0.04em; margin-bottom:22px; }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 5rem);
+    max-width:16ch; margin:0 auto 26px; line-height:1.15;
+  }
+  .hero p{ color:#a99f8f; max-width:40ch; margin:0 auto; }
+
+  .lineup{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .item{
+    padding:50px 26px; border-right:1px solid var(--line); text-align:center;
+  }
+  .item:last-child{ border-right:none; }
+  .item .swatch{
+    width:56px; height:56px; margin:0 auto 26px;
+    border:1px solid var(--gold); border-radius:50%;
+  }
+  .item h3{ font-family:'Manrope'; font-weight:400; font-size:1rem; margin-bottom:8px; }
+  .item .price{ color:var(--gold); font-size:0.9rem; }
+
+  .split{
+    display:grid; grid-template-columns:1fr 1fr;
+    align-items:stretch;
+  }
+  .split-copy{
+    padding:90px 6vw; display:flex; flex-direction:column; justify-content:center;
+  }
+  .split-copy h2{ font-size:2.1rem; margin-bottom:20px; max-width:12ch; }
+  .split-copy p{ color:#a99f8f; max-width:38ch; }
+  .split-visual{
+    background: linear-gradient(155deg, #24201B 0%, #100E0C 100%);
+    position:relative;
+  }
+  .split-visual::after{
+    content:""; position:absolute; inset:60px;
+    border:1px solid var(--gold); opacity:0.5;
+  }
+
+  footer{
+    padding:40px 6vw; display:flex; justify-content:space-between;
+    font-size:0.85rem; color:#75695a; border-top:1px solid var(--line);
+  }
+
+  @media (max-width:760px){
+    .lineup{ grid-template-columns:repeat(2,1fr); }
+    .item{ border-bottom:1px solid var(--line); }
+    .split{ grid-template-columns:1fr; }
+    .split-visual{ height:280px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Noir</div>
+  <nav>
+    <a href="#piezas">Piezas</a>
+    <a href="#taller">Taller</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Alta joyería contemporánea</div>
+  <h1>Menos piezas, mejor hechas</h1>
+  <p>Trabajamos oro de 18k y piedras naturales en series limitadas de no más de 20 unidades.</p>
+</section>
+
+<section class="lineup" id="piezas">
+  <div class="item">
+    <div class="swatch"></div>
+    <h3>Anillo Eco</h3>
+    <div class="price">$320.000</div>
+  </div>
+  <div class="item">
+    <div class="swatch"></div>
+    <h3>Cadena Lino</h3>
+    <div class="price">$410.000</div>
+  </div>
+  <div class="item">
+    <div class="swatch"></div>
+    <h3>Aros Duna</h3>
+    <div class="price">$185.000</div>
+  </div>
+  <div class="item">
+    <div class="swatch"></div>
+    <h3>Pulsera Cauce</h3>
+    <div class="price">$260.000</div>
+  </div>
+</section>
+
+<section class="split" id="taller">
+  <div class="split-copy">
+    <h2>El taller detrás de cada pieza</h2>
+    <p>Cuatro orfebres, un solo banco de trabajo. Cada modelo pasa semanas de pulido antes de salir a la venta.</p>
+  </div>
+  <div class="split-visual"></div>
+</section>
+
+<footer>
+  <span>Noir Joyería</span>
+  <span>© 2026</span>
+</footer>
+
+</body>
+</html>
